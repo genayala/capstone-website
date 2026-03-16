@@ -3,19 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A clinician-facing hub to support culturally competent audiology care for Hispanic/Latino communities and Spanish-speaking patients. Topic-based resources for hearing aids, cochlear implants, hearing protection, interpreter workflow, and counseling tools." />
+  <meta name="description" content="A clinician-facing hub to support culturally competent audiology care for Hispanic/Latino communities and Spanish-speaking patients." />
   <title>Hispanic/Latino Cultural Competency in Audiology | Resource Hub</title>
 
   <style>
     :root{
-      /* Flyer-inspired palette */
       --sage-900:#1f3b34;
       --sage-700:#2f5a50;
       --sage-600:#3c7266;
       --sage-500:#4f8f8b;
 
       --cream:#f6efe6;
-      --sand:#efe5d8;
       --paper:#fbf7f1;
 
       --ink:#10221b;
@@ -29,17 +27,14 @@
       --radius-xl: 26px;
       --radius-lg: 20px;
       --radius-md: 16px;
-      --radius-sm: 12px;
 
       --container: min(1160px, 92vw);
-
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
 
     [data-theme="dark"]{
       --cream:#071512;
-      --sand:#06110f;
       --paper:#0b1f18;
       --ink:#e9f6f1;
       --muted:#b8d1c8;
@@ -57,7 +52,6 @@
       background:
         radial-gradient(circle at 18% 8%, rgba(79,143,139,.18), transparent 45%),
         radial-gradient(circle at 82% 14%, rgba(239,229,216,.85), transparent 42%),
-        radial-gradient(circle at 50% 110%, rgba(246,239,230,.95), transparent 46%),
         linear-gradient(180deg, var(--cream), var(--paper) 55%, var(--cream));
       line-height: 1.55;
       overflow-x:hidden;
@@ -66,10 +60,6 @@
     a{ color: var(--sage-600); text-decoration:none; }
     a:hover{ text-decoration:underline; }
     .container{ width: var(--container); margin: 0 auto; }
-    .sr-only{
-      position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
-      clip:rect(0,0,0,0); white-space:nowrap; border:0;
-    }
 
     header{
       position: sticky;
@@ -79,6 +69,7 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
+
     .nav{
       display:flex;
       align-items:center;
@@ -86,12 +77,14 @@
       gap: 12px;
       padding: 14px 0;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap: 12px;
       min-width: 260px;
     }
+
     .mark{
       width: 42px;
       height: 42px;
@@ -102,14 +95,16 @@
       position: relative;
       overflow:hidden;
     }
+
     .mark::after{
       content:"";
-      position:absolute; inset:-40%;
+      position:absolute;
+      inset:-40%;
       background: conic-gradient(from 180deg, transparent, rgba(255,232,163,.45), transparent);
       animation: spin 10s linear infinite;
       opacity:.65;
-      pointer-events:none;
     }
+
     @keyframes spin { to { transform: rotate(360deg); } }
 
     .brand-title{
@@ -119,6 +114,7 @@
       line-height: 1.1;
       font-size: 14px;
     }
+
     .brand-sub{
       margin: 2px 0 0 0;
       font-size: 12px;
@@ -132,6 +128,7 @@
       justify-content: flex-end;
       align-items: center;
     }
+
     .tab{
       appearance:none;
       border: 1px solid var(--border);
@@ -145,26 +142,29 @@
       transition: transform .12s ease, background .2s ease, border-color .2s ease;
       white-space: nowrap;
     }
+
     .tab:hover{ transform: translateY(-1px); }
+
     .tab[aria-selected="true"]{
       background: color-mix(in oklab, rgba(79,143,139,.18) 65%, var(--paper));
       border-color: color-mix(in oklab, var(--sage-600) 20%, var(--border));
     }
+
     .icon-btn{
       appearance:none;
       border: 1px solid var(--border);
       background: color-mix(in oklab, var(--paper) 80%, transparent);
       color: var(--ink);
-      width: 42px; height: 42px;
+      width: 42px;
+      height: 42px;
       border-radius: 999px;
       cursor:pointer;
       box-shadow: 0 10px 22px rgba(16,34,27,.06);
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      transition: transform .12s ease;
     }
-    .icon-btn:hover{ transform: translateY(-1px); }
+
     .icon{ width: 18px; height: 18px; fill: currentColor; }
 
     main{ padding: 28px 0 64px 0; }
@@ -178,6 +178,7 @@
       align-items: start;
       margin-top: 8px;
     }
+
     @media (max-width: 980px){
       .hero{ grid-template-columns: 1fr; }
       .brand{ min-width:auto; }
@@ -192,17 +193,18 @@
       position: relative;
       overflow:hidden;
     }
+
     .hero-left::before{
       content:"";
-      position:absolute; inset:-30%;
+      position:absolute;
+      inset:-30%;
       background:
         radial-gradient(circle at 20% 25%, rgba(79,143,139,.25), transparent 58%),
-        radial-gradient(circle at 75% 20%, rgba(239,229,216,.9), transparent 60%),
-        radial-gradient(circle at 55% 95%, rgba(246,239,230,.95), transparent 60%);
+        radial-gradient(circle at 75% 20%, rgba(239,229,216,.9), transparent 60%);
       filter: blur(8px);
       opacity: .85;
-      pointer-events:none;
     }
+
     .hero-left > *{ position: relative; }
 
     .kicker{
@@ -215,18 +217,22 @@
       font-weight: 900;
       color: var(--sage-600);
     }
+
     .k-dot{
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
       background: var(--sage-600);
       box-shadow: 0 0 0 7px color-mix(in oklab, rgba(79,143,139,.18) 70%, transparent);
     }
+
     .hero h2{
       margin: 12px 0 10px 0;
       font-size: clamp(30px, 3.6vw, 48px);
       line-height: 1.05;
       letter-spacing: -.3px;
     }
+
     .sub{
       margin: 0 0 14px 0;
       color: var(--muted);
@@ -240,6 +246,7 @@
       gap: 10px;
       margin-top: 12px;
     }
+
     .btn{
       appearance:none;
       border: 1px solid var(--border);
@@ -253,14 +260,14 @@
       display:inline-flex;
       align-items:center;
       gap: 10px;
-      transition: transform .12s ease, background .2s ease, border-color .2s ease;
     }
-    .btn:hover{ transform: translateY(-1px); }
+
     .btn.primary{
       border-color: transparent;
       color: #fff;
       background: linear-gradient(135deg, var(--sage-600), var(--sage-700));
     }
+
     .btn small{ font-weight: 740; opacity: .92; }
 
     .chips{
@@ -269,6 +276,7 @@
       gap: 8px;
       margin-top: 14px;
     }
+
     .chip{
       font-size: 12px;
       padding: 8px 10px;
@@ -284,6 +292,7 @@
       gap: 12px;
       margin-top: 14px;
     }
+
     @media (max-width: 980px){
       .bento{ grid-template-columns: 1fr; }
     }
@@ -296,24 +305,20 @@
       padding: 16px;
       position: relative;
       overflow:hidden;
-      cursor:pointer;
       text-align:left;
-      transition: transform .12s ease, border-color .2s ease;
     }
-    .tile:hover{
-      transform: translateY(-2px);
-      border-color: color-mix(in oklab, var(--sage-600) 20%, var(--border));
-    }
+
     .tile::before{
       content:"";
-      position:absolute; inset:-30%;
+      position:absolute;
+      inset:-30%;
       background:
         radial-gradient(circle at 25% 25%, rgba(79,143,139,.20), transparent 55%),
         radial-gradient(circle at 85% 30%, rgba(239,229,216,.80), transparent 60%);
       filter: blur(10px);
       opacity: .9;
-      pointer-events:none;
     }
+
     .tile > *{ position: relative; }
 
     .tile h3{
@@ -322,17 +327,20 @@
       letter-spacing: -.1px;
       font-weight: 920;
     }
+
     .tile p{
       margin:0;
       font-size: 13px;
       color: var(--muted);
     }
+
     .meta{
       display:flex;
       gap: 8px;
       flex-wrap: wrap;
       margin-top: 10px;
     }
+
     .tag{
       font-size: 12px;
       padding: 7px 10px;
@@ -343,6 +351,7 @@
       color: var(--ink);
       white-space: nowrap;
     }
+
     .tag.soon{
       background: color-mix(in oklab, rgba(255,232,163,.55) 55%, var(--paper));
       border-color: color-mix(in oklab, rgba(255,232,163,.55) 55%, var(--border));
@@ -353,6 +362,7 @@
     .span-4{ grid-column: span 4; }
     .span-6{ grid-column: span 6; }
     .span-12{ grid-column: span 12; }
+
     @media (max-width: 980px){
       .span-7,.span-5,.span-4,.span-6,.span-12{ grid-column: span 1; }
     }
@@ -367,17 +377,18 @@
       position: relative;
       margin-top: 14px;
     }
+
     .showcase::before{
       content:"";
-      position:absolute; inset:-40%;
+      position:absolute;
+      inset:-40%;
       background:
         radial-gradient(circle at 20% 30%, rgba(79,143,139,.22), transparent 52%),
-        radial-gradient(circle at 80% 22%, rgba(239,229,216,.92), transparent 55%),
-        radial-gradient(circle at 50% 95%, rgba(246,239,230,.95), transparent 58%);
+        radial-gradient(circle at 80% 22%, rgba(239,229,216,.92), transparent 55%);
       filter: blur(10px);
       opacity: .9;
-      pointer-events:none;
     }
+
     .showcase-grid{
       position: relative;
       display:grid;
@@ -385,15 +396,18 @@
       gap: 14px;
       align-items:center;
     }
+
     @media (max-width: 980px){
       .showcase-grid{ grid-template-columns: 1fr; }
     }
+
     .showcase h3{
       margin:0 0 6px 0;
       font-size: 18px;
       font-weight: 940;
       letter-spacing: -.1px;
     }
+
     .showcase p{
       margin:0;
       color: var(--muted);
@@ -405,9 +419,11 @@
       position: relative;
       height: 330px;
     }
+
     @media (max-width: 980px){
       .fan{ height: 380px; }
     }
+
     .mock{
       position:absolute;
       width: 235px;
@@ -418,25 +434,23 @@
       box-shadow: var(--shadow2);
       overflow:hidden;
       transform-origin: center bottom;
-      transition: transform .2s ease;
     }
+
     .mock img{
       width: 100%;
       height: 100%;
       object-fit: cover;
       display:block;
     }
+
     .m1{ left: 6px; top: 18px; transform: rotate(-7deg); }
     .m2{ left: 88px; top: 0px; transform: rotate(1deg); }
     .m3{ left: 170px; top: 26px; transform: rotate(9deg); }
 
-    .fan:hover .m1{ transform: rotate(-9deg) translateY(-2px); }
-    .fan:hover .m2{ transform: rotate(1deg) translateY(-6px); }
-    .fan:hover .m3{ transform: rotate(11deg) translateY(-2px); }
-
     .section{
       margin-top: 18px;
     }
+
     .section-head{
       display:flex;
       align-items: baseline;
@@ -444,12 +458,14 @@
       gap: 10px;
       margin: 18px 0 10px 0;
     }
+
     .section-head h3{
       margin:0;
       font-size: 20px;
       letter-spacing: -.1px;
       font-weight: 940;
     }
+
     .section-head span{
       font-size: 13px;
       color: var(--muted2);
@@ -463,6 +479,7 @@
       overflow:hidden;
       padding: 14px;
     }
+
     .hub-top{
       display:flex;
       align-items:center;
@@ -471,6 +488,7 @@
       flex-wrap: wrap;
       padding: 6px 6px 12px 6px;
     }
+
     .search{
       flex: 1 1 280px;
       min-width: 240px;
@@ -482,12 +500,14 @@
       font-size: 14px;
       outline: none;
     }
+
     .filters{
       display:flex;
       flex-wrap: wrap;
       gap: 8px;
       align-items:center;
     }
+
     .pill{
       appearance:none;
       border: 1px solid var(--border);
@@ -498,10 +518,9 @@
       cursor:pointer;
       font-weight: 800;
       font-size: 13px;
-      transition: transform .12s ease, background .2s ease;
       white-space: nowrap;
     }
-    .pill:hover{ transform: translateY(-1px); }
+
     .pill.active{
       background: color-mix(in oklab, rgba(79,143,139,.18) 68%, var(--paper));
       border-color: color-mix(in oklab, var(--sage-600) 20%, var(--border));
@@ -513,6 +532,7 @@
       gap: 12px;
       padding: 6px;
     }
+
     @media (max-width: 980px){
       .resource-grid{ grid-template-columns: 1fr; }
     }
@@ -526,11 +546,6 @@
       cursor:pointer;
       text-align:left;
       padding:0;
-      transition: transform .12s ease, border-color .2s ease;
-    }
-    .resource-card:hover{
-      transform: translateY(-2px);
-      border-color: color-mix(in oklab, var(--sage-600) 20%, var(--border));
     }
 
     .thumb{
@@ -543,6 +558,7 @@
       position: relative;
       overflow:hidden;
     }
+
     .thumb img{
       position:absolute;
       inset:0;
@@ -555,12 +571,14 @@
     }
 
     .resource-body{ padding: 14px; }
+
     .r-title{
       margin:0 0 6px 0;
       font-size: 15px;
       font-weight: 940;
       letter-spacing: -.1px;
     }
+
     .r-desc{
       margin:0;
       font-size: 13px;
@@ -576,14 +594,12 @@
       color: var(--ink);
       box-shadow: var(--shadow);
     }
+
     dialog::backdrop{
       background: rgba(0,0,0,.35);
       backdrop-filter: blur(4px);
     }
-    .modal{
-      display:grid;
-      grid-template-columns: 1fr;
-    }
+
     .modal-head{
       padding: 16px 16px 10px 16px;
       border-bottom: 1px solid var(--border);
@@ -592,28 +608,34 @@
       justify-content: space-between;
       gap: 12px;
     }
+
     .modal-head h4{
       margin:0;
       font-size: 18px;
       font-weight: 940;
       letter-spacing: -.1px;
     }
+
     .modal-head p{
       margin: 6px 0 0 0;
       color: var(--muted);
       font-size: 14px;
     }
+
     .modal-body{
       padding: 14px 16px 16px 16px;
     }
+
     .modal-actions{
       display:flex;
       gap: 10px;
       flex-wrap: wrap;
       margin-top: 12px;
     }
+
     .close{
-      width: 40px; height: 40px;
+      width: 40px;
+      height: 40px;
       border-radius: 999px;
       border: 1px solid var(--border);
       background: color-mix(in oklab, var(--paper) 92%, transparent);
@@ -691,8 +713,6 @@
             strengthen understanding, and improve follow-through in hearing healthcare.
           </p>
 
-  
-
           <div class="cta-row">
             <button class="btn primary" data-go="panel-resources">Browse resources <small>search + filters</small></button>
             <button class="btn" data-go="panel-tools">Clinician tools <small>scripts + checklists</small></button>
@@ -719,34 +739,23 @@
               </div>
             </button>
 
-            <div class="tile span-4" role="note" aria-label="What we offer">
+            <div class="tile span-4">
               <h3>What you will find here</h3>
               <p>Spanish-forward handouts plus clinician-facing tools to support understanding and follow-through.</p>
-              <div class="meta">
-                <span class="tag">Patient flyers</span>
-                <span class="tag">Counseling prompts</span>
-              </div>
             </div>
 
-            <div class="tile span-4" role="note" aria-label="Clinic safety note">
+            <div class="tile span-4">
               <h3>Clinic-safe reminder</h3>
               <p>Avoid uploading patient identifiers. Keep materials general and educational.</p>
-              <div class="meta">
-                <span class="tag">HIPAA mindful</span>
-              </div>
             </div>
 
-            <div class="tile span-4" role="note" aria-label="Updating note">
+            <div class="tile span-4">
               <h3>Easy updates</h3>
               <p>Upload PDFs later to <code>assets/pdfs/</code> and connect them in minutes.</p>
-              <div class="meta">
-                <span class="tag soon">Coming soon</span>
-              </div>
             </div>
           </div>
         </div>
 
-        <!-- Flyer showcase -->
         <div class="showcase" aria-label="Flyer showcase">
           <div class="showcase-grid">
             <div>
@@ -758,29 +767,25 @@
 
               <div class="chips" style="margin-top:12px;">
                 <div class="chip">Noise and prevention</div>
+                <div class="chip">Hearing aids</div>
                 <div class="chip">Hearing loss basics</div>
-                <div class="chip">Spanish-forward</div>
               </div>
 
               <div class="cta-row" style="margin-top:14px;">
                 <button class="btn primary" data-go="panel-resources">View in library</button>
                 <button class="btn" data-go="panel-about">Project context</button>
               </div>
-
-              <p style="margin-top:12px; color: var(--muted2); font-size: 13px;">
-                Upload previews into <code>assets/previews/</code> to display images here.
-              </p>
             </div>
 
             <div class="fan" aria-hidden="true">
               <div class="mock m1">
-                <img src="assets/previews/noise-protection-es.jpg" alt="Flyer preview: Ruido y protección auditiva">
+                <img src="assets/previews/noise-protection-es.jpeg" alt="Flyer preview: Ruido y protección auditiva">
               </div>
               <div class="mock m2">
-                <img src="assets/previews/hearing-loss-en.jpg" alt="Flyer preview: Hearing loss basics">
+                <img src="assets/previews/hearing-aids-expectations-es.png" alt="Flyer preview: Qué esperar con aparatos auditivos">
               </div>
               <div class="mock m3">
-                <img src="assets/previews/hearing-loss-es.jpg" alt="Flyer preview: Pérdida de la audición lo básico">
+                <img src="assets/previews/hearing-loss-es.png" alt="Flyer preview: Pérdida de la audición lo básico">
               </div>
             </div>
           </div>
@@ -789,44 +794,30 @@
     </section>
 
     <!-- ABOUT -->
-<section class="panel fade-in" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
-  <div class="section">
-    <div class="section-head">
-      <h3>About</h3>
-      <span>About the project and the author</span>
-    </div>
+    <section class="panel fade-in" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+      <div class="section">
+        <div class="section-head">
+          <h3>About</h3>
+          <span>About the project and the author</span>
+        </div>
 
-    <div class="bento">
-      <div class="tile span-6" role="note">
-        <h3>About the Project</h3>
-        <p>
-          This website was created as part of my doctoral capstone to support culturally responsive audiology care for Hispanic and Latino communities and Spanish-speaking patients. The goal is to provide Spanish-forward educational materials and clinician tools that help improve communication, understanding, and follow-through in hearing healthcare.
-        </p>
-        <div class="meta">
-          
+        <div class="bento">
+          <div class="tile span-6">
+            <h3>About the Project</h3>
+            <p>
+              This website was created as part of my doctoral capstone to support culturally responsive audiology care for Hispanic and Latino communities and Spanish-speaking patients. The goal is to provide Spanish-forward educational materials and clinician tools that help improve communication, understanding, and follow-through in hearing healthcare.
+            </p>
+          </div>
+
+          <div class="tile span-6">
+            <h3>About the Author</h3>
+            <p>
+              My name is <strong>Gennesis Ayala</strong>, and I am a Doctor of Audiology graduate student at Western Washington University. I am also proud to be part of the Hispanic/Latino community, which has shaped both my personal experiences and my perspective as a future healthcare provider. Throughout my training in audiology, I have seen how language barriers and cultural differences can affect access to hearing healthcare. Many Spanish-speaking patients face challenges when trying to understand hearing loss, hearing technology, and treatment options when educational materials are primarily available in English. As someone who comes from this community, I understand how important it is for patients to feel respected, understood, and supported in healthcare settings. My hope is that these materials help clinicians communicate more effectively with Spanish-speaking patients and contribute to more accessible and equitable hearing healthcare.
+            </p>
+          </div>
         </div>
       </div>
-
-      <div class="tile span-6" role="note">
-        <h3>About the Author</h3>
-        <p>
-          My name is <strong>Gennesis Ayala</strong>, and I am a Doctor of Audiology graduate student at Western Washington University. I am also proud to be part of the Hispanic/Latino community, which has shaped both my personal experiences and my perspective as a future healthcare provider.
-          Throughout my training in audiology, I have seen how language barriers and cultural differences can affect access to hearing healthcare. Many Spanish-speaking patients face challenges when trying to understand hearing loss, hearing technology, and treatment options when educational materials are primarily available in English.
-          As someone who comes from this community, I understand how important it is for patients to feel respected, understood, and supported in healthcare settings. My hope is that these materials help clinicians communicate more effectively with Spanish-speaking patients and contribute to more accessible and equitable hearing healthcare.
-
-        </p>
-        <div class="meta">
-         
-        </div>
-      
-
-        <div class="meta">
-        
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- RESOURCES -->
     <section class="panel fade-in" id="panel-resources" role="tabpanel" aria-labelledby="tab-resources">
@@ -852,133 +843,364 @@
 
           <div class="resource-grid" id="resourceGrid">
 
-  <!-- Noise Protection -->
-  <button class="resource-card" type="button"
-    data-cat="hearing-protection"
-    data-tags="noise protection ruido proteccion auditiva spanish flyer"
-    data-title="Ruido y Protección Auditiva"
-    data-desc="Spanish flyer explaining noise exposure and ways to protect hearing."
-    data-audience="Patient"
-    data-language="Spanish"
-    data-status="Preview available"
-    data-preview="assets/previews/noise-protection-es.png"
-    data-pdf="#">
+            <button class="resource-card" type="button"
+              data-cat="hearing-protection"
+              data-tags="noise protection ruido proteccion auditiva spanish flyer"
+              data-title="Ruido y Protección Auditiva"
+              data-desc="Spanish flyer explaining noise exposure and ways to protect hearing."
+              data-audience="Patient"
+              data-language="Spanish"
+              data-status="Preview available"
+              data-preview="assets/previews/noise-protection-es.jpeg"
+              data-pdf="#">
+              <div class="thumb">
+                <img src="assets/previews/noise-protection-es.jpeg" alt="Ruido y Protección Auditiva flyer preview">
+              </div>
+              <div class="resource-body">
+                <p class="r-title">Ruido y Protección Auditiva</p>
+                <p class="r-desc">Noise exposure and prevention tips.</p>
+                <div class="meta">
+                  <span class="tag">Patient</span>
+                  <span class="tag">Spanish</span>
+                </div>
+              </div>
+            </button>
 
-    <div class="thumb">
-      <img src="assets/previews/noise-protection-es.png" alt="Ruido y Protección Auditiva flyer preview">
-    </div>
+            <button class="resource-card" type="button"
+              data-cat="counseling"
+              data-tags="perdida audicion hearing loss spanish flyer"
+              data-title="Pérdida de la Audición: Lo Básico"
+              data-desc="Spanish flyer explaining hearing loss and treatment options."
+              data-audience="Patient"
+              data-language="Spanish"
+              data-status="Preview available"
+              data-preview="assets/previews/hearing-loss-es.png"
+              data-pdf="#">
+              <div class="thumb">
+                <img src="assets/previews/hearing-loss-es.png" alt="Pérdida de la Audición flyer preview">
+              </div>
+              <div class="resource-body">
+                <p class="r-title">Pérdida de la Audición: Lo Básico</p>
+                <p class="r-desc">Signs, causes, and treatment options.</p>
+                <div class="meta">
+                  <span class="tag">Patient</span>
+                  <span class="tag">Spanish</span>
+                </div>
+              </div>
+            </button>
 
-    <div class="resource-body">
-      <p class="r-title">Ruido y Protección Auditiva</p>
-      <p class="r-desc">Noise exposure and prevention tips.</p>
-      <div class="meta">
-        <span class="tag">Patient</span>
-        <span class="tag">Spanish</span>
+            <button class="resource-card" type="button"
+              data-cat="cochlear-implants"
+              data-tags="implantes cocleares cochlear implant spanish flyer"
+              data-title="Información sobre Implantes Cocleares"
+              data-desc="Spanish flyer explaining cochlear implants and candidacy."
+              data-audience="Patient"
+              data-language="Spanish"
+              data-status="Preview available"
+              data-preview="assets/previews/cochlear-implants-es.png"
+              data-pdf="#">
+              <div class="thumb">
+                <img src="assets/previews/cochlear-implants-es.png" alt="Información sobre Implantes Cocleares flyer preview">
+              </div>
+              <div class="resource-body">
+                <p class="r-title">Información sobre Implantes Cocleares</p>
+                <p class="r-desc">CI basics, candidacy, and what happens after surgery.</p>
+                <div class="meta">
+                  <span class="tag">Patient</span>
+                  <span class="tag">Spanish</span>
+                </div>
+              </div>
+            </button>
+
+            <button class="resource-card" type="button"
+              data-cat="hearing-aids"
+              data-tags="aparatos auditivos hearing aids spanish flyer"
+              data-title="Qué Esperar con Aparatos Auditivos"
+              data-desc="Spanish flyer explaining what to expect when starting hearing aids."
+              data-audience="Patient"
+              data-language="Spanish"
+              data-status="Preview available"
+              data-preview="assets/previews/hearing-aids-expectations-es.png"
+              data-pdf="#">
+              <div class="thumb">
+                <img src="assets/previews/hearing-aids-expectations-es.png" alt="Qué Esperar con Aparatos Auditivos flyer preview">
+              </div>
+              <div class="resource-body">
+                <p class="r-title">Qué Esperar con Aparatos Auditivos</p>
+                <p class="r-desc">Adaptation and first appointment expectations.</p>
+                <div class="meta">
+                  <span class="tag">Patient</span>
+                  <span class="tag">Spanish</span>
+                </div>
+              </div>
+            </button>
+
+            <button class="resource-card" type="button"
+              data-cat="interpreters"
+              data-tags="interpreters checklist prebrief pacing teach back documentation"
+              data-title="Interpreter Best Practices (Checklist)"
+              data-desc="Pre-brief, pacing, short segments, teach-back, and documentation tips."
+              data-audience="Clinician"
+              data-language="English"
+              data-status="Ready to draft"
+              data-preview=""
+              data-pdf="#">
+              <div class="thumb"></div>
+              <div class="resource-body">
+                <p class="r-title">Interpreter Best Practices (Checklist)</p>
+                <p class="r-desc">Clinic-ready workflow tool (coming soon).</p>
+                <div class="meta">
+                  <span class="tag">Clinician</span>
+                  <span class="tag">English</span>
+                  <span class="tag soon">Coming soon</span>
+                </div>
+              </div>
+            </button>
+
+          </div>
+
+          <div style="padding: 10px 10px 6px 10px; color: var(--muted2); font-size: 13px;">
+            When PDFs are ready, upload them to <code>assets/pdfs/</code> and replace each resource’s <code>data-pdf</code> value.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLINICIAN TOOLS -->
+    <section class="panel fade-in" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools">
+      <div class="section">
+        <div class="section-head">
+          <h3>Clinician tools</h3>
+          <span>Fast, respectful, culturally responsive workflow</span>
+        </div>
+
+        <div class="bento">
+          <div class="tile span-6">
+            <h3>Teach-back (non-judgmental)</h3>
+            <p>Just so I know I explained it clearly, can you show me how you will do this at home?</p>
+          </div>
+
+          <div class="tile span-6">
+            <h3>Interpreter pre-brief (30 seconds)</h3>
+            <p>Goal of visit, key terms, tone, plan for short segments, and teach-back at the end.</p>
+          </div>
+
+          <div class="tile span-12">
+            <h3>Cultural responsiveness in audiology</h3>
+            <p>
+              Confirm language preference, use plain language, avoid idioms, and check understanding without shame.
+              Use visuals and repeat key points slowly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="panel fade-in" id="panel-references" role="tabpanel" aria-labelledby="tab-references">
+      <div class="section">
+        <div class="section-head">
+          <h3>References</h3>
+          <span>Paste your APA references here</span>
+        </div>
+
+        <div class="tile span-12">
+          <h3>Reference list (APA)</h3>
+          <p style="margin-top:8px;">
+            Add citations related to cultural competency, language access in healthcare, interpreter best practices, and disparities in hearing healthcare.
+          </p>
+          <div style="margin-top:10px; color: var(--muted);">
+            <ul style="margin:0; padding-left:18px;">
+              <li>Author, A. A. (Year). Title of article. <em>Journal</em>, volume(issue), pages.</li>
+              <li>Organization. (Year). Title of resource. Publisher.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between;">
+          <div>
+            <strong style="color:var(--ink);">Resource Hub</strong>
+            <span style="color:var(--muted2);"> • Built on GitHub Pages</span>
+          </div>
+          <div style="color:var(--muted2);">
+            Author: <strong style="color:var(--ink);">Gennesis Ayala</strong>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <dialog id="resourceModal" aria-label="Resource details">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <h4 id="modalTitle">Resource</h4>
+          <p id="modalDesc">Description</p>
+        </div>
+        <button class="close" id="closeModal" aria-label="Close">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.3 5.71a1 1 0 0 1 0 1.41L13.41 12l4.89 4.88a1 1 0 1 1-1.41 1.42L12 13.41 7.12 18.3a1 1 0 0 1-1.42-1.41L10.59 12 5.7 7.12A1 1 0 0 1 7.12 5.7L12 10.59l4.88-4.88a1 1 0 0 1 1.42 0Z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div id="modalMeta" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
+
+        <div id="modalPreviewWrap" style="margin-top:12px; display:none;">
+          <img id="modalPreviewImg" alt="Preview" style="width:100%; max-height:420px; object-fit:cover; border-radius:16px; border:1px solid var(--border); box-shadow: var(--shadow2);" />
+        </div>
+
+        <div class="modal-actions">
+          <a class="btn primary" id="modalDownload" href="#" target="_blank" rel="noopener">
+            Download PDF <small>(when available)</small>
+          </a>
+          <button class="btn" id="modalCopy">
+            Copy citation note <small>for references</small>
+          </button>
+          <button class="btn" id="modalGoTools">
+            Go to Clinician Tools <small>scripts/checklists</small>
+          </button>
+        </div>
+
+        <p style="margin:14px 0 0 0; color:var(--muted); font-size:13px;">
+          Tip: When PDFs are ready, upload to <code>assets/pdfs/</code> and update the card’s <code>data-pdf</code> link.
+        </p>
       </div>
     </div>
-  </button>
+  </dialog>
 
-  <!-- Hearing Loss Basics -->
-  <button class="resource-card" type="button"
-    data-cat="counseling"
-    data-tags="perdida audicion hearing loss spanish flyer"
-    data-title="Pérdida de la Audición: Lo Básico"
-    data-desc="Spanish flyer explaining hearing loss and treatment options."
-    data-audience="Patient"
-    data-language="Spanish"
-    data-status="Preview available"
-    data-preview="assets/previews/hearing-loss-es.png"
-    data-pdf="#">
+  <script>
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+    const panels = Array.from(document.querySelectorAll('.panel'));
 
-    <div class="thumb">
-      <img src="assets/previews/hearing-loss-es.png" alt="Pérdida de la Audición flyer preview">
-    </div>
+    function activate(panelId){
+      panels.forEach(p => p.classList.toggle('active', p.id === panelId));
+      tabs.forEach(t => {
+        const on = t.getAttribute('aria-controls') === panelId;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-    <div class="resource-body">
-      <p class="r-title">Pérdida de la Audición: Lo Básico</p>
-      <p class="r-desc">Signs, causes, and treatment options.</p>
-      <div class="meta">
-        <span class="tag">Patient</span>
-        <span class="tag">Spanish</span>
-      </div>
-    </div>
-  </button>
+    tabs.forEach(t => t.addEventListener('click', () => activate(t.getAttribute('aria-controls'))));
+    document.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => activate(b.getAttribute('data-go'))));
 
-  <!-- Cochlear Implants -->
-  <button class="resource-card" type="button"
-    data-cat="cochlear-implants"
-    data-tags="implantes cocleares cochlear implant spanish flyer"
-    data-title="Información sobre Implantes Cocleares"
-    data-desc="Spanish flyer explaining cochlear implants and candidacy."
-    data-audience="Patient"
-    data-language="Spanish"
-    data-status="Preview available"
-    data-preview="assets/previews/cochlear-implants-es.jpg"
-    data-pdf="#">
+    const themeBtn = document.getElementById('themeBtn');
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme){ document.documentElement.setAttribute('data-theme', savedTheme); }
 
-    <div class="thumb">
-      <img src="assets/previews/cochlear-implants-es.jpg" alt="Información sobre Implantes Cocleares flyer preview">
-    </div>
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? '' : 'dark';
+      if(next){
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      }else{
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.removeItem('theme');
+      }
+    });
 
-    <div class="resource-body">
-      <p class="r-title">Información sobre Implantes Cocleares</p>
-      <p class="r-desc">CI basics, candidacy, and what happens after surgery.</p>
-      <div class="meta">
-        <span class="tag">Patient</span>
-        <span class="tag">Spanish</span>
-      </div>
-    </div>
-  </button>
+    const filterBtns = Array.from(document.querySelectorAll('.pill[data-filter]'));
+    const cards = Array.from(document.querySelectorAll('.resource-card'));
+    const searchInput = document.getElementById('searchInput');
+    let activeFilter = 'all';
 
-  <!-- Hearing Aids Expectations -->
-  <button class="resource-card" type="button"
-    data-cat="hearing-aids"
-    data-tags="aparatos auditivos hearing aids spanish flyer"
-    data-title="Qué Esperar con Aparatos Auditivos"
-    data-desc="Spanish flyer explaining what to expect when starting hearing aids."
-    data-audience="Patient"
-    data-language="Spanish"
-    data-status="Preview available"
-    data-preview="assets/previews/hearing-aids-expectations-es.png"
-    data-pdf="#">
+    function applyFilters(){
+      const q = (searchInput.value || '').toLowerCase().trim();
+      cards.forEach(card => {
+        const cat = card.dataset.cat;
+        const tags = (card.dataset.tags || '').toLowerCase();
+        const matchesFilter = (activeFilter === 'all') || (cat === activeFilter);
+        const matchesSearch = !q || tags.includes(q) || card.innerText.toLowerCase().includes(q);
+        card.style.display = (matchesFilter && matchesSearch) ? '' : 'none';
+      });
+    }
 
-    <div class="thumb">
-      <img src="assets/previews/hearing-aids-expectations-es.png" alt="Qué Esperar con Aparatos Auditivos flyer preview">
-    </div>
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilter = btn.dataset.filter;
+        applyFilters();
+      });
+    });
 
-    <div class="resource-body">
-      <p class="r-title">Qué Esperar con Aparatos Auditivos</p>
-      <p class="r-desc">Adaptation and first appointment expectations.</p>
-      <div class="meta">
-        <span class="tag">Patient</span>
-        <span class="tag">Spanish</span>
-      </div>
-    </div>
-  </button>
+    searchInput?.addEventListener('input', applyFilters);
 
-  <!-- Interpreter Best Practices -->
-  <button class="resource-card" type="button"
-    data-cat="interpreters"
-    data-tags="interpreters checklist prebrief pacing teach back documentation"
-    data-title="Interpreter Best Practices (Checklist)"
-    data-desc="Pre-brief, pacing, short segments, teach-back, and documentation tips."
-    data-audience="Clinician"
-    data-language="English"
-    data-status="Ready to draft"
-    data-preview=""
-    data-pdf="#">
+    const modal = document.getElementById('resourceModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalMeta = document.getElementById('modalMeta');
+    const modalDownload = document.getElementById('modalDownload');
+    const modalCopy = document.getElementById('modalCopy');
+    const modalGoTools = document.getElementById('modalGoTools');
+    const modalPreviewWrap = document.getElementById('modalPreviewWrap');
+    const modalPreviewImg = document.getElementById('modalPreviewImg');
 
-    <div class="thumb"></div>
+    function openResource(card){
+      const title = card.dataset.title || 'Resource';
+      const desc = card.dataset.desc || '';
+      const audience = card.dataset.audience || '';
+      const language = card.dataset.language || '';
+      const status = card.dataset.status || '';
+      const preview = card.dataset.preview || '';
+      const pdf = card.dataset.pdf || '#';
+      const cat = card.dataset.cat || 'all';
 
-    <div class="resource-body">
-      <p class="r-title">Interpreter Best Practices (Checklist)</p>
-      <p class="r-desc">Clinic-ready workflow tool (coming soon).</p>
-      <div class="meta">
-        <span class="tag">Clinician</span>
-        <span class="tag">English</span>
-        <span class="tag soon">Coming soon</span>
-      </div>
-    </div>
-  </button>
+      modalTitle.textContent = title;
+      modalDesc.textContent = desc;
 
-</div>
+      modalMeta.innerHTML = '';
+      [audience, language, status].filter(Boolean).forEach(t => {
+        const s = document.createElement('span');
+        s.className = 'tag' + (t.toLowerCase().includes('coming') ? ' soon' : '');
+        s.textContent = t;
+        modalMeta.appendChild(s);
+      });
+
+      modalDownload.setAttribute('href', pdf);
+
+      if(preview){
+        modalPreviewImg.src = preview;
+        modalPreviewWrap.style.display = '';
+      }else{
+        modalPreviewImg.src = '';
+        modalPreviewWrap.style.display = 'none';
+      }
+
+      modalCopy.onclick = async () => {
+        const citation = `Resource: ${title}. Category: ${cat}. Website: Hispanic/Latino Cultural Competency in Audiology (Resource Hub).`;
+        try{
+          await navigator.clipboard.writeText(citation);
+          modalCopy.innerHTML = 'Copied <small>paste into references</small>';
+          setTimeout(() => modalCopy.innerHTML = 'Copy citation note <small>for references</small>', 1400);
+        }catch(e){
+          alert('Copy failed. You can manually copy: ' + citation);
+        }
+      };
+
+      modalGoTools.onclick = () => { modal.close(); activate('panel-tools'); };
+      modal.showModal();
+    }
+
+    cards.forEach(card => card.addEventListener('click', () => openResource(card)));
+    closeModal.addEventListener('click', () => modal.close());
+
+    modal.addEventListener('click', (e) => {
+      const rect = modal.getBoundingClientRect();
+      const inDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+                        rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
+      if(!inDialog) modal.close();
+    });
+
+    applyFilters();
+  </script>
+</body>
+</html>
