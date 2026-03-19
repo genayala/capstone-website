@@ -12,22 +12,17 @@
       --sage-700:#2f5a50;
       --sage-600:#3c7266;
       --sage-500:#4f8f8b;
-
       --cream:#f6efe6;
       --paper:#fbf7f1;
-
       --ink:#10221b;
       --muted:#4a6159;
       --muted2:#637970;
-
       --border: rgba(16,34,27,.12);
       --shadow: 0 18px 55px rgba(16,34,27,.10);
       --shadow2: 0 10px 26px rgba(16,34,27,.08);
-
       --radius-xl: 26px;
       --radius-lg: 20px;
       --radius-md: 16px;
-
       --container: min(1160px, 92vw);
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -700,7 +695,6 @@
   </header>
 
   <main class="container">
-    <!-- HOME -->
     <section class="panel active fade-in" id="panel-home" role="tabpanel" aria-labelledby="tab-home">
       <div class="hero">
         <div class="hero-left">
@@ -723,20 +717,11 @@
             <button class="tile span-7" type="button" data-go="panel-resources">
               <h3>Resource library</h3>
               <p>Search and filter by topic. Open a card for preview and download links.</p>
-              <div class="meta">
-                <span class="tag">Hearing aids</span>
-                <span class="tag">Cochlear implants</span>
-                <span class="tag">Hearing protection</span>
-              </div>
             </button>
 
             <button class="tile span-5" type="button" data-go="panel-tools">
               <h3>Clinician tools</h3>
               <p>Teach-back scripts, interpreter prompts, and counseling language that is clear and respectful.</p>
-              <div class="meta">
-                <span class="tag">Scripts</span>
-                <span class="tag">Checklists</span>
-              </div>
             </button>
 
             <div class="tile span-4">
@@ -765,12 +750,6 @@
                 When you are ready, swap previews for downloadable PDFs.
               </p>
 
-              <div class="chips" style="margin-top:12px;">
-                <div class="chip">Noise and prevention</div>
-                <div class="chip">Hearing aids</div>
-                <div class="chip">Hearing loss basics</div>
-              </div>
-
               <div class="cta-row" style="margin-top:14px;">
                 <button class="btn primary" data-go="panel-resources">View in library</button>
                 <button class="btn" data-go="panel-about">Project context</button>
@@ -793,7 +772,6 @@
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="panel fade-in" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
       <div class="section">
         <div class="section-head">
@@ -819,7 +797,6 @@
       </div>
     </section>
 
-    <!-- RESOURCES -->
     <section class="panel fade-in" id="panel-resources" role="tabpanel" aria-labelledby="tab-resources">
       <div class="section">
         <div class="section-head">
@@ -859,10 +836,6 @@
               <div class="resource-body">
                 <p class="r-title">Ruido y Protección Auditiva</p>
                 <p class="r-desc">Noise exposure and prevention tips.</p>
-                <div class="meta">
-                  <span class="tag">Patient</span>
-                  <span class="tag">Spanish</span>
-                </div>
               </div>
             </button>
 
@@ -882,10 +855,6 @@
               <div class="resource-body">
                 <p class="r-title">Pérdida de la Audición: Lo Básico</p>
                 <p class="r-desc">Signs, causes, and treatment options.</p>
-                <div class="meta">
-                  <span class="tag">Patient</span>
-                  <span class="tag">Spanish</span>
-                </div>
               </div>
             </button>
 
@@ -905,10 +874,6 @@
               <div class="resource-body">
                 <p class="r-title">Información sobre Implantes Cocleares</p>
                 <p class="r-desc">CI basics, candidacy, and what happens after surgery.</p>
-                <div class="meta">
-                  <span class="tag">Patient</span>
-                  <span class="tag">Spanish</span>
-                </div>
               </div>
             </button>
 
@@ -928,10 +893,6 @@
               <div class="resource-body">
                 <p class="r-title">Qué Esperar con Aparatos Auditivos</p>
                 <p class="r-desc">Adaptation and first appointment expectations.</p>
-                <div class="meta">
-                  <span class="tag">Patient</span>
-                  <span class="tag">Spanish</span>
-                </div>
               </div>
             </button>
 
@@ -949,11 +910,6 @@
               <div class="resource-body">
                 <p class="r-title">Interpreter Best Practices (Checklist)</p>
                 <p class="r-desc">Clinic-ready workflow tool (coming soon).</p>
-                <div class="meta">
-                  <span class="tag">Clinician</span>
-                  <span class="tag">English</span>
-                  <span class="tag soon">Coming soon</span>
-                </div>
               </div>
             </button>
 
@@ -966,7 +922,6 @@
       </div>
     </section>
 
-    <!-- CLINICIAN TOOLS -->
     <section class="panel fade-in" id="panel-tools" role="tabpanel" aria-labelledby="tab-tools">
       <div class="section">
         <div class="section-head">
@@ -996,7 +951,6 @@
       </div>
     </section>
 
-    <!-- REFERENCES -->
     <section class="panel fade-in" id="panel-references" role="tabpanel" aria-labelledby="tab-references">
       <div class="section">
         <div class="section-head">
@@ -1049,8 +1003,6 @@
       </div>
 
       <div class="modal-body">
-        <div id="modalMeta" style="display:flex; gap:8px; flex-wrap:wrap;"></div>
-
         <div id="modalPreviewWrap" style="margin-top:12px; display:none;">
           <img id="modalPreviewImg" alt="Preview" style="width:100%; max-height:420px; object-fit:cover; border-radius:16px; border:1px solid var(--border); box-shadow: var(--shadow2);" />
         </div>
@@ -1059,9 +1011,6 @@
           <a class="btn primary" id="modalDownload" href="#" target="_blank" rel="noopener">
             Download PDF <small>(when available)</small>
           </a>
-          <button class="btn" id="modalCopy">
-            Copy citation note <small>for references</small>
-          </button>
           <button class="btn" id="modalGoTools">
             Go to Clinician Tools <small>scripts/checklists</small>
           </button>
@@ -1137,9 +1086,7 @@
     const closeModal = document.getElementById('closeModal');
     const modalTitle = document.getElementById('modalTitle');
     const modalDesc = document.getElementById('modalDesc');
-    const modalMeta = document.getElementById('modalMeta');
     const modalDownload = document.getElementById('modalDownload');
-    const modalCopy = document.getElementById('modalCopy');
     const modalGoTools = document.getElementById('modalGoTools');
     const modalPreviewWrap = document.getElementById('modalPreviewWrap');
     const modalPreviewImg = document.getElementById('modalPreviewImg');
@@ -1147,24 +1094,11 @@
     function openResource(card){
       const title = card.dataset.title || 'Resource';
       const desc = card.dataset.desc || '';
-      const audience = card.dataset.audience || '';
-      const language = card.dataset.language || '';
-      const status = card.dataset.status || '';
       const preview = card.dataset.preview || '';
       const pdf = card.dataset.pdf || '#';
-      const cat = card.dataset.cat || 'all';
 
       modalTitle.textContent = title;
       modalDesc.textContent = desc;
-
-      modalMeta.innerHTML = '';
-      [audience, language, status].filter(Boolean).forEach(t => {
-        const s = document.createElement('span');
-        s.className = 'tag' + (t.toLowerCase().includes('coming') ? ' soon' : '');
-        s.textContent = t;
-        modalMeta.appendChild(s);
-      });
-
       modalDownload.setAttribute('href', pdf);
 
       if(preview){
@@ -1174,17 +1108,6 @@
         modalPreviewImg.src = '';
         modalPreviewWrap.style.display = 'none';
       }
-
-      modalCopy.onclick = async () => {
-        const citation = `Resource: ${title}. Category: ${cat}. Website: Hispanic/Latino Cultural Competency in Audiology (Resource Hub).`;
-        try{
-          await navigator.clipboard.writeText(citation);
-          modalCopy.innerHTML = 'Copied <small>paste into references</small>';
-          setTimeout(() => modalCopy.innerHTML = 'Copy citation note <small>for references</small>', 1400);
-        }catch(e){
-          alert('Copy failed. You can manually copy: ' + citation);
-        }
-      };
 
       modalGoTools.onclick = () => { modal.close(); activate('panel-tools'); };
       modal.showModal();
