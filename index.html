@@ -1102,7 +1102,7 @@
     const tabs = Array.from(document.querySelectorAll('.tab'));
     const panels = Array.from(document.querySelectorAll('.panel'));
 
-    function activate(panelId){
+activate(panelId){
       panels.forEach(p => p.classList.toggle('active', p.id === panelId));
       tabs.forEach(t => {
         const on = t.getAttribute('aria-controls') === panelId;
@@ -1135,7 +1135,7 @@
     const searchInput = document.getElementById('searchInput');
     let activeFilter = 'all';
 
-    function applyFilters(){
+function applyFilters(){
       const q = (searchInput.value || '').toLowerCase().trim();
       cards.forEach(card => {
         const cat = card.dataset.cat;
@@ -1168,26 +1168,79 @@
     const modalPreviewImg = document.getElementById('modalPreviewImg');
 
     function openResource(card){
-      const title = card.dataset.title || 'Resource';
-      const desc = card.dataset.desc || '';
-      const preview = card.dataset.preview || '';
-      const pdf = card.dataset.pdf || '#';
+  const title = card.dataset.title || 'Resource';
+  const desc = card.dataset.desc || '';
+  const preview = card.dataset.preview || '';
+  const pdf = card.dataset.pdf || '#';
 
-      modalTitle.textContent = title;
-      modalDesc.textContent = desc;
-      modalDownload.setAttribute('href', pdf);
+  modalTitle.textContent = title;
+  modalDesc.textContent = desc;
 
-      if(preview){
-        modalPreviewImg.src = preview;
-        modalPreviewWrap.style.display = '';
-      }else{
-        modalPreviewImg.src = '';
-        modalPreviewWrap.style.display = 'none';
-      }
+  modalDownload.onclick = () => {
+    const printWindow = window.open('', '_blank');
 
-      modalGoTools.onclick = () => { modal.close(); activate('panel-tools'); };
-      modal.showModal();
-    }
+    printWindow.document.write(`
+      <html>
+      <head>
+        <title>${title}</title>
+        <style>
+          body{
+            margin:0;
+            padding:0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            background:white;
+          }
+
+          img{
+            width:auto;
+            height:auto;
+            max-width:100vw;
+            max-height:100vh;
+            object-fit:contain;
+          }
+
+          @media print{
+            body{
+              margin:0;
+            }
+
+            img{
+              width:100%;
+              height:auto;
+              max-height:95vh;
+              object-fit:contain;
+              page-break-inside:avoid;
+            }
+          }
+        </style>
+      </head>
+      <body>
+        <img src="${pdf}">
+      </body>
+      </html>
+    `);
+
+    printWindow.document.close();
+  };
+
+  if(preview){
+    modalPreviewImg.src = preview;
+    modalPreviewWrap.style.display = '';
+  }else{
+    modalPreviewImg.src = '';
+    modalPreviewWrap.style.display = 'none';
+  }
+
+  modalGoTools.onclick = () => {
+    modal.close();
+    activate('panel-tools');
+  };
+
+  modal.showModal();
+}
+      
 
     cards.forEach(card => card.addEventListener('click', () => openResource(card)));
     closeModal.addEventListener('click', () => modal.close());
