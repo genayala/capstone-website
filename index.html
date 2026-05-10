@@ -264,12 +264,12 @@
     .btn small{ font-weight: 740; opacity: .92; }
 
     .bento{
-  display:grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 12px;
-  margin-top: 14px;
-  align-items: start;
-}
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+      align-items: start;
+    }
 
     @media (max-width: 980px){
       .bento{ grid-template-columns: 1fr; }
@@ -503,8 +503,12 @@
       padding:0;
     }
 
+    .resource-card:hover{
+      transform: translateY(-2px);
+    }
+
     .thumb{
-      height: 130px;
+      height: 210px;
       border-bottom: 1px solid var(--border);
       background:
         radial-gradient(circle at 25% 25%, rgba(79,143,139,.18), transparent 55%),
@@ -520,9 +524,7 @@
       width:100%;
       height:100%;
       object-fit: cover;
-      opacity: .22;
-      filter: saturate(1.05) contrast(1.03);
-      mix-blend-mode: multiply;
+      display:block;
     }
 
     .resource-body{ padding: 14px; }
@@ -669,34 +671,34 @@
 
           <div class="cta-row">
             <button class="btn primary" data-go="panel-resources">Browse resources <small>search + filters</small></button>
-            <button class="btn" data-go="panel-tools">Clinician tools <small>scripts + checklists</small></button>
+            <button class="btn" data-go="panel-tools">Clinician tools <small>printable resources</small></button>
             <button class="btn" data-go="panel-about">About <small>scope + use</small></button>
           </div>
 
           <div class="bento" aria-label="Quick pathways">
             <button class="tile span-7" type="button" data-go="panel-resources">
               <h3>Resource library</h3>
-              <p>Search and filter by topic. Open a card for preview and download links.</p>
+              <p>Search and filter by topic. Open a card to preview or print a resource.</p>
             </button>
 
             <button class="tile span-5" type="button" data-go="panel-tools">
               <h3>Clinician tools</h3>
-              <p>Teach-back scripts, interpreter prompts, and counseling language that is clear and respectful.</p>
+              <p>Quick tips, vocabulary support, and culturally responsive counseling tools for audiologists.</p>
             </button>
 
             <div class="tile span-4">
-              <h3>What you will find here</h3>
-              <p>Spanish-forward handouts plus clinician-facing tools to support understanding and follow-through.</p>
+              <h3>Patient handouts</h3>
+              <p>Spanish-language materials designed to support patient understanding at home and in clinic.</p>
             </div>
 
             <div class="tile span-4">
-              <h3>Clinic-safe reminder</h3>
-              <p>Avoid uploading patient identifiers. Keep materials general and educational.</p>
+              <h3>Clinician support</h3>
+              <p>English-facing tools for audiologists working with Spanish-speaking patients and families.</p>
             </div>
 
             <div class="tile span-4">
-              <h3>Easy updates</h3>
-              <p>Upload PDFs later to <code>assets/pdfs/</code> and connect them in minutes.</p>
+              <h3>Print-ready</h3>
+              <p>Open each resource in a new tab, then print or save as needed.</p>
             </div>
           </div>
         </div>
@@ -706,24 +708,24 @@
             <div>
               <h3>Featured Resources</h3>
               <p>
-                Browse a growing collection of Spanish-language audiology materials designed to support patient understanding, counseling, and access to hearing healthcare.
+                Browse a collection of Spanish-language patient materials and English clinician tools designed to support culturally responsive audiology care.
               </p>
 
               <div class="cta-row" style="margin-top:14px;">
-                <button class="btn primary" data-go="panel-resources">View in library</button>
+                <button class="btn primary" data-go="panel-resources">View resources</button>
                 <button class="btn" data-go="panel-about">Project context</button>
               </div>
             </div>
 
             <div class="fan" aria-hidden="true">
               <div class="mock m1">
-                <img src="assets/previews/noise-protection-es.jpeg" alt="Flyer preview: Ruido y protección auditiva">
+                <img src="assets/Hearing protection.png" alt="Flyer preview: Ruido y protección auditiva">
               </div>
               <div class="mock m2">
-                <img src="assets/previews/hearing-aids-expectations-es.png" alt="Flyer preview: Qué esperar con aparatos auditivos">
+                <img src="assets/What to expect with your hearing aids.png" alt="Flyer preview: Qué esperar con aparatos auditivos">
               </div>
               <div class="mock m3">
-                <img src="assets/previews/hearing-loss-es.png" alt="Flyer preview: Pérdida de la audición lo básico">
+                <img src="assets/Tinnitus.png" alt="Flyer preview: Zumbido en los oídos">
               </div>
             </div>
           </div>
@@ -740,176 +742,202 @@
 
         <div style="display:grid; grid-template-columns: 1fr 1.5fr; gap:24px; align-items:start;">
 
-  <!-- LEFT SIDE -->
-  <div>
-    <!-- HEADSHOT -->
-<img class="about-img" src="./assets/assets/IMG_0054.jpeg" alt="Gennesis Ayala headshot" style="width:100%; max-width:350px; border-radius:20px; display:block; margin-bottom:16px;">    
-   
-    <!-- ABOUT AUTHOR -->
-    <div class="tile">
-      <h3>About the Author</h3>
-      <p>
-        My name is <strong>Gennesis Ayala</strong>, and I am a Doctor of Audiology graduate student at Western Washington University. I am also proud to be part of the Hispanic/Latino community, which has shaped both my personal experiences and my perspective as a future healthcare provider.
-      </p>
-      <p style="margin-top:12px;">
-        Throughout my training in audiology, I have seen how language barriers and cultural differences can affect access to hearing healthcare. Many Spanish-speaking patients face challenges when trying to understand hearing loss, hearing technology, and treatment options when educational materials are primarily available in English.
-      </p>
-      <p style="margin-top:12px;">
-        As someone who comes from this community, I understand how important it is for patients to feel respected, understood, and supported in healthcare settings. My hope is that these materials help clinicians communicate more effectively with Spanish-speaking patients and contribute to more accessible and equitable hearing healthcare.
-      </p>
-    </div>
-  </div>
+          <div>
+            <img class="about-img" src="./assets/assets/IMG_0054.jpeg" alt="Gennesis Ayala headshot" style="width:100%; max-width:350px; border-radius:20px; display:block; margin-bottom:16px;">    
 
-  <!-- RIGHT SIDE -->
-<div>
+            <div class="tile">
+              <h3>About the Author</h3>
+              <p>
+                My name is <strong>Gennesis Ayala</strong>, and I am a Doctor of Audiology graduate student at Western Washington University. I am also proud to be part of the Hispanic/Latino community, which has shaped both my personal experiences and my perspective as a future healthcare provider.
+              </p>
+              <p style="margin-top:12px;">
+                Throughout my training in audiology, I have seen how language barriers and cultural differences can affect access to hearing healthcare. Many Spanish-speaking patients face challenges when trying to understand hearing loss, hearing technology, and treatment options when educational materials are primarily available in English.
+              </p>
+              <p style="margin-top:12px;">
+                As someone who comes from this community, I understand how important it is for patients to feel respected, understood, and supported in healthcare settings. My hope is that these materials help clinicians communicate more effectively with Spanish-speaking patients and contribute to more accessible and equitable hearing healthcare.
+              </p>
+            </div>
+          </div>
 
-  <!-- ABOUT PROJECT FIRST -->
-  <div class="tile" style="margin-bottom:16px;">
-    <h3>About the Project</h3>
-    <p>
-      This website was created as part of my doctoral capstone to support culturally responsive audiology care for Hispanic and Latino communities and Spanish-speaking patients. The goal is to provide Spanish-forward educational materials and clinician tools that help improve communication, understanding, and follow-through in hearing healthcare.
-    </p>
-    <p style="margin-top:12px;">
-      These resources are designed to be practical, easy to use in clinical settings, and adaptable to a variety of patient needs.
-    </p>
-  </div>
+          <div>
+            <div class="tile" style="margin-bottom:16px;">
+              <h3>About the Project</h3>
+              <p>
+                This website was created as part of my doctoral capstone to support culturally responsive audiology care for Hispanic and Latino communities and Spanish-speaking patients. The goal is to provide Spanish-forward educational materials and clinician tools that help improve communication, understanding, and follow-through in hearing healthcare.
+              </p>
+              <p style="margin-top:12px;">
+                These resources are designed to be practical, easy to use in clinical settings, and adaptable to a variety of patient needs.
+              </p>
+            </div>
 
-  <!-- STACKED PHOTOS (NO CROPPING) -->
-  <div style="display:flex; flex-direction:column; gap:16px;">
-    
-    <img src="assets/community-main.jpg"
-      alt="Gennesis Ayala providing audiology care"
-      style="width:100%; border-radius:16px; object-fit:contain; background:#eee; padding:6px;">
+            <div style="display:flex; flex-direction:column; gap:16px;">
+              <img src="assets/community-main.jpg"
+                alt="Gennesis Ayala providing audiology care"
+                style="width:100%; border-radius:16px; object-fit:contain; background:#eee; padding:6px;">
 
-    <img src="assets/assets/community-b.jpg"
-      alt="Gennesis Ayala in a community audiology setting"
-      style="width:100%; border-radius:16px; object-fit:contain; background:#eee; padding:6px;">
+              <img src="assets/assets/community-b.jpg"
+                alt="Gennesis Ayala in a community audiology setting"
+                style="width:100%; border-radius:16px; object-fit:contain; background:#eee; padding:6px;">
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-        
     <section class="panel fade-in" id="panel-resources" role="tabpanel" aria-labelledby="tab-resources">
       <div class="section">
         <div class="section-head">
           <h3>Resources</h3>
-          <span>Search, filter, then click a card for preview and details</span>
+          <span>Click a card to preview, open, and print</span>
         </div>
 
         <div class="hub" aria-label="Resource hub">
           <div class="hub-top">
-            <input class="search" type="search" id="searchInput" placeholder="Search (ex: batteries, cleaning, activation, earplugs, interpreter, teach-back)..." />
+            <input class="search" type="search" id="searchInput" placeholder="Search resources..." />
 
             <div class="filters" aria-label="Filters">
               <button class="pill active" data-filter="all" type="button">All</button>
+              <button class="pill" data-filter="patient" type="button">Patient Flyers</button>
+              <button class="pill" data-filter="clinician" type="button">Clinician Tools</button>
               <button class="pill" data-filter="hearing-aids" type="button">Hearing Aids</button>
-              <button class="pill" data-filter="cochlear-implants" type="button">Cochlear Implants</button>
               <button class="pill" data-filter="hearing-protection" type="button">Hearing Protection</button>
-              <button class="pill" data-filter="interpreters" type="button">Interpreters</button>
               <button class="pill" data-filter="counseling" type="button">Counseling</button>
+              <button class="pill" data-filter="pediatrics" type="button">Pediatrics</button>
             </div>
           </div>
 
           <div class="resource-grid" id="resourceGrid">
 
-            <button class="resource-card" type="button"
-              data-cat="hearing-protection"
-              data-tags="noise protection ruido proteccion auditiva spanish flyer"
-              data-title="Ruido y Protección Auditiva"
-              data-desc="Spanish flyer explaining noise exposure and ways to protect hearing."
-              data-audience="Patient"
-              data-language="Spanish"
-              data-status="Preview available"
-              data-preview="assets/previews/noise-protection-es.jpeg"
-              data-pdf="#">
-              <div class="thumb">
-                <img src="assets/previews/noise-protection-es.jpeg" alt="Ruido y Protección Auditiva flyer preview">
-              </div>
-              <div class="resource-body">
-                <p class="r-title">Ruido y Protección Auditiva</p>
-                <p class="r-desc">Noise exposure and prevention tips.</p>
-              </div>
+            <button class="resource-card" type="button" data-cat="patient" data-tags="appointment cita audiology audiologia spanish patient"
+              data-title="¿Qué Esperar en una Cita de Audiología?"
+              data-desc="Spanish patient flyer explaining what happens during an audiology appointment."
+              data-preview="assets/What to expect at your audiology appointment.png"
+              data-pdf="assets/What to expect at your audiology appointment.png">
+              <div class="thumb"><img src="assets/What to expect at your audiology appointment.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">¿Qué Esperar en una Cita de Audiología?</p><p class="r-desc">Appointment preparation and expectations.</p></div>
             </button>
 
-            <button class="resource-card" type="button"
-              data-cat="counseling"
-              data-tags="perdida audicion hearing loss spanish flyer"
-              data-title="Pérdida de la Audición: Lo Básico"
-              data-desc="Spanish flyer explaining hearing loss and treatment options."
-              data-audience="Patient"
-              data-language="Spanish"
-              data-status="Preview available"
-              data-preview="assets/previews/hearing-loss-es.png"
-              data-pdf="#">
-              <div class="thumb">
-                <img src="assets/previews/hearing-loss-es.png" alt="Pérdida de la Audición flyer preview">
-              </div>
-              <div class="resource-body">
-                <p class="r-title">Pérdida de la Audición: Lo Básico</p>
-                <p class="r-desc">Signs, causes, and treatment options.</p>
-              </div>
+            <button class="resource-card" type="button" data-cat="patient" data-tags="questions preguntas audiologist audiólogo spanish patient"
+              data-title="Preguntas que Puede Hacerle a su Audiólogo"
+              data-desc="Spanish patient flyer with questions patients can ask during hearing care visits."
+              data-preview="assets/Questions you can ask to your audiologist.png"
+              data-pdf="assets/Questions you can ask to your audiologist.png">
+              <div class="thumb"><img src="assets/Questions you can ask to your audiologist.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Preguntas para su Audiólogo</p><p class="r-desc">Questions to support self-advocacy.</p></div>
             </button>
 
-            <button class="resource-card" type="button"
-              data-cat="cochlear-implants"
-              data-tags="implantes cocleares cochlear implant spanish flyer"
-              data-title="Información sobre Implantes Cocleares"
-              data-desc="Spanish flyer explaining cochlear implants and candidacy."
-              data-audience="Patient"
-              data-language="Spanish"
-              data-status="Preview available"
-              data-preview="assets/previews/cochlear-implants-es.png"
-              data-pdf="#">
-              <div class="thumb">
-                <img src="assets/previews/cochlear-implants-es.png" alt="Información sobre Implantes Cocleares flyer preview">
-              </div>
-              <div class="resource-body">
-                <p class="r-title">Información sobre Implantes Cocleares</p>
-                <p class="r-desc">CI basics, candidacy, and what happens after surgery.</p>
-              </div>
-            </button>
-
-            <button class="resource-card" type="button"
-              data-cat="hearing-aids"
-              data-tags="aparatos auditivos hearing aids spanish flyer"
+            <button class="resource-card" type="button" data-cat="hearing-aids" data-tags="hearing aids aparatos auditivos expectations spanish patient"
               data-title="Qué Esperar con Aparatos Auditivos"
-              data-desc="Spanish flyer explaining what to expect when starting hearing aids."
-              data-audience="Patient"
-              data-language="Spanish"
-              data-status="Preview available"
-              data-preview="assets/previews/hearing-aids-expectations-es.png"
-              data-pdf="#">
-              <div class="thumb">
-                <img src="assets/previews/hearing-aids-expectations-es.png" alt="Qué Esperar con Aparatos Auditivos flyer preview">
-              </div>
-              <div class="resource-body">
-                <p class="r-title">Qué Esperar con Aparatos Auditivos</p>
-                <p class="r-desc">Adaptation and first appointment expectations.</p>
-              </div>
+              data-desc="Spanish patient flyer explaining adjustment expectations for hearing aids."
+              data-preview="assets/What to expect with your hearing aids.png"
+              data-pdf="assets/What to expect with your hearing aids.png">
+              <div class="thumb"><img src="assets/What to expect with your hearing aids.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Qué Esperar con Aparatos Auditivos</p><p class="r-desc">Hearing aid adjustment and expectations.</p></div>
             </button>
 
-            <button class="resource-card" type="button"
-              data-cat="interpreters"
-              data-tags="interpreters checklist prebrief pacing teach back documentation"
-              data-title="Interpreter Best Practices (Checklist)"
-              data-desc="Pre-brief, pacing, short segments, teach-back, and documentation tips."
-              data-audience="Clinician"
-              data-language="English"
-              data-status="Ready to draft"
-              data-preview=""
-              data-pdf="#">
-              <div class="thumb"></div>
-              <div class="resource-body">
-                <p class="r-title">Interpreter Best Practices (Checklist)</p>
-                <p class="r-desc">Clinic-ready workflow tool (coming soon).</p>
-              </div>
+            <button class="resource-card" type="button" data-cat="hearing-aids" data-tags="hearing aids care cleaning batteries maintenance spanish patient"
+              data-title="Cómo Cuidar sus Aparatos Auditivos"
+              data-desc="Spanish patient flyer explaining daily care and maintenance for hearing devices."
+              data-preview="assets/How to take care of your hearing devices.png"
+              data-pdf="assets/How to take care of your hearing devices.png">
+              <div class="thumb"><img src="assets/How to take care of your hearing devices.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Cómo Cuidar sus Aparatos Auditivos</p><p class="r-desc">Cleaning, storage, batteries, and follow-up.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="hearing-protection" data-tags="noise hearing protection ruido proteccion auditiva work music construction gardening spanish patient"
+              data-title="Ruido y Protección Auditiva"
+              data-desc="Spanish patient flyer explaining noise exposure and ways to protect hearing."
+              data-preview="assets/Hearing protection.png"
+              data-pdf="assets/Hearing protection.png">
+              <div class="thumb"><img src="assets/Hearing protection.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Ruido y Protección Auditiva</p><p class="r-desc">Noise exposure and prevention tips.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="counseling" data-tags="communication strategies family familia hearing loss spanish patient"
+              data-title="Estrategias de Comunicación para Familias"
+              data-desc="Spanish patient flyer with communication strategies for families."
+              data-preview="assets/Communication strategies for the familiy.png"
+              data-pdf="assets/Communication strategies for the familiy.png">
+              <div class="thumb"><img src="assets/Communication strategies for the familiy.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Estrategias de Comunicación para Familias</p><p class="r-desc">Family-centered communication support.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="patient" data-tags="cost insurance resources costo seguro recursos spanish patient"
+              data-title="Costo, Seguro y Recursos"
+              data-desc="Spanish patient flyer explaining costs, insurance, and hearing healthcare resources."
+              data-preview="assets/Cost, insurances, other.png"
+              data-pdf="assets/Cost, insurances, other.png">
+              <div class="thumb"><img src="assets/Cost, insurances, other.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Costo, Seguro y Recursos</p><p class="r-desc">Payment, coverage, and support options.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="patient" data-tags="tinnitus zumbido ringing ears spanish patient"
+              data-title="Zumbido en los Oídos"
+              data-desc="Spanish patient flyer explaining tinnitus, common causes, and when to seek help."
+              data-preview="assets/Tinnitus.png"
+              data-pdf="assets/Tinnitus.png">
+              <div class="thumb"><img src="assets/Tinnitus.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Zumbido en los Oídos</p><p class="r-desc">Tinnitus education and support.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="patient" data-tags="dizziness balance mareo equilibrio vestibular spanish patient"
+              data-title="Mareo y Problemas del Equilibrio"
+              data-desc="Spanish patient flyer explaining dizziness, vertigo, balance concerns, and when to seek help."
+              data-preview="assets/Dizziness and balance.png"
+              data-pdf="assets/Dizziness and balance.png">
+              <div class="thumb"><img src="assets/Dizziness and balance.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Mareo y Problemas del Equilibrio</p><p class="r-desc">Vestibular and balance education.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="pediatrics" data-tags="pediatric children hearing test niños pruebas auditivas spanish patient"
+              data-title="La Importancia de las Pruebas Auditivas para Niños"
+              data-desc="Spanish family flyer explaining why pediatric hearing testing matters."
+              data-preview="assets/Importance of pediatric audiology.png"
+              data-pdf="assets/Importance of pediatric audiology.png">
+              <div class="thumb"><img src="assets/Importance of pediatric audiology.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Pruebas Auditivas para Niños</p><p class="r-desc">Pediatric hearing testing and early support.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="cochlear-implants" data-tags="cochlear implants implantes cocleares spanish patient"
+              data-title="Información sobre Implantes Cocleares"
+              data-desc="Spanish patient flyer explaining cochlear implants and candidacy."
+              data-preview="assets/cochlear-implants-es.png"
+              data-pdf="assets/cochlear-implants-es.png">
+              <div class="thumb"><img src="assets/cochlear-implants-es.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Información sobre Implantes Cocleares</p><p class="r-desc">CI basics, candidacy, and support.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="clinician" data-tags="quick tips clinician audiologist spanish speaking patients english"
+              data-title="Quick Tips for Working with Spanish-Speaking Patients"
+              data-desc="English clinician tool with practical strategies for clearer, more culturally responsive communication."
+              data-preview="assets/Quick tips.png"
+              data-pdf="assets/Quick tips.png">
+              <div class="thumb"><img src="assets/Quick tips.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Quick Tips for Audiologists</p><p class="r-desc">Clinician-facing communication strategies.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="clinician" data-tags="audiology vocabulary english spanish quick reference clinician"
+              data-title="Audiology Vocabulary Quick Reference"
+              data-desc="English-Spanish audiology vocabulary guide for clinicians."
+              data-preview="assets/Aud vocab.png"
+              data-pdf="assets/Aud vocab.png">
+              <div class="thumb"><img src="assets/Aud vocab.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Audiology Vocabulary</p><p class="r-desc">English-Spanish quick reference.</p></div>
+            </button>
+
+            <button class="resource-card" type="button" data-cat="clinician" data-tags="cultural considerations hispanic latino care clinician audiology"
+              data-title="Key Cultural Considerations in Hispanic/Latino Care"
+              data-desc="English clinician tool supporting culturally responsive audiology counseling."
+              data-preview="assets/Key considerations.png"
+              data-pdf="assets/Key considerations.png">
+              <div class="thumb"><img src="assets/Key considerations.png" alt=""></div>
+              <div class="resource-body"><p class="r-title">Key Cultural Considerations</p><p class="r-desc">Culturally responsive care guidance.</p></div>
             </button>
 
           </div>
 
           <div style="padding: 10px 10px 6px 10px; color: var(--muted2); font-size: 13px;">
-            When PDFs are ready, upload them to <code>assets/pdfs/</code> and replace each resource’s <code>data-pdf</code> value.
+            Click any resource to preview it. Use <strong>Open / Print Resource</strong> to open the image in a new tab and print.
           </div>
         </div>
       </div>
@@ -919,25 +947,39 @@
       <div class="section">
         <div class="section-head">
           <h3>Clinician tools</h3>
-          <span>Fast, respectful, culturally responsive workflow</span>
+          <span>English resources for audiologists working with Spanish-speaking patients</span>
         </div>
 
         <div class="bento">
+          <button class="tile span-4" type="button" data-go="panel-resources">
+            <h3>Quick Tips</h3>
+            <p>Practical strategies for using plain language, checking understanding, and supporting family-centered care.</p>
+          </button>
+
+          <button class="tile span-4" type="button" data-go="panel-resources">
+            <h3>Audiology Vocabulary</h3>
+            <p>English-Spanish quick reference for common audiology terms and appointment phrases.</p>
+          </button>
+
+          <button class="tile span-4" type="button" data-go="panel-resources">
+            <h3>Cultural Considerations</h3>
+            <p>Guidance for building trust, communicating clearly, and avoiding assumptions in care.</p>
+          </button>
+
           <div class="tile span-6">
-            <h3>Teach-back (non-judgmental)</h3>
-            <p>Just so I know I explained it clearly, can you show me how you will do this at home?</p>
+            <h3>Teach-back example</h3>
+            <p>Just so I know I explained it clearly, can you show me how you will use this at home?</p>
           </div>
 
           <div class="tile span-6">
-            <h3>Interpreter pre-brief (30 seconds)</h3>
-            <p>Goal of visit, key terms, tone, plan for short segments, and teach-back at the end.</p>
+            <h3>Interpreter reminder</h3>
+            <p>Speak directly to the patient, pause often, use short phrases, and confirm understanding before moving on.</p>
           </div>
 
           <div class="tile span-12">
-            <h3>Cultural responsiveness in audiology</h3>
+            <h3>Culturally responsive care</h3>
             <p>
-              Confirm language preference, use plain language, avoid idioms, and check understanding without shame.
-              Use visuals and repeat key points slowly.
+              Direct translation does not always equal understanding. Use plain language, visual support, teach-back, and respectful family-centered counseling to support patient understanding and follow-through.
             </p>
           </div>
         </div>
@@ -954,7 +996,7 @@
         <div class="tile span-12">
           <h3>Reference list (APA)</h3>
           <p style="margin-top:8px;">
-            Add citations related to cultural competency, language access in healthcare, interpreter best practices, and disparities in hearing healthcare.
+            Add citations related to cultural competency, language access in healthcare, interpreter best practices, health literacy, and disparities in hearing healthcare.
           </p>
           <div style="margin-top:10px; color: var(--muted);">
             <ul style="margin:0; padding-left:18px;">
@@ -997,20 +1039,20 @@
 
       <div class="modal-body">
         <div id="modalPreviewWrap" style="margin-top:12px; display:none;">
-          <img id="modalPreviewImg" alt="Preview" style="width:100%; max-height:420px; object-fit:cover; border-radius:16px; border:1px solid var(--border); box-shadow: var(--shadow2);" />
+          <img id="modalPreviewImg" alt="Preview" style="width:100%; max-height:70vh; object-fit:contain; border-radius:16px; border:1px solid var(--border); box-shadow: var(--shadow2); background:#fff;" />
         </div>
 
         <div class="modal-actions">
           <a class="btn primary" id="modalDownload" href="#" target="_blank" rel="noopener">
-            Download PDF <small>(when available)</small>
+            Open / Print Resource
           </a>
           <button class="btn" id="modalGoTools">
-            Go to Clinician Tools <small>scripts/checklists</small>
+            Go to Clinician Tools
           </button>
         </div>
 
         <p style="margin:14px 0 0 0; color:var(--muted); font-size:13px;">
-          Tip: When PDFs are ready, upload to <code>assets/pdfs/</code> and update the card’s <code>data-pdf</code> link.
+          To print: open the resource in a new tab, then use your browser’s print option.
         </p>
       </div>
     </div>
@@ -1058,8 +1100,9 @@
       cards.forEach(card => {
         const cat = card.dataset.cat;
         const tags = (card.dataset.tags || '').toLowerCase();
+        const text = card.innerText.toLowerCase();
         const matchesFilter = (activeFilter === 'all') || (cat === activeFilter);
-        const matchesSearch = !q || tags.includes(q) || card.innerText.toLowerCase().includes(q);
+        const matchesSearch = !q || tags.includes(q) || text.includes(q);
         card.style.display = (matchesFilter && matchesSearch) ? '' : 'none';
       });
     }
